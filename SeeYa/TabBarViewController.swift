@@ -13,6 +13,12 @@ class TabBarViewController: UITabBarController {
         super.viewDidLoad()
 
         view.backgroundColor = .white
+        self.tabBar.unselectedItemTintColor = UIColor(named: "TabDefault")
+        
+        tabBar.layer.shadowOffset = CGSize(width: 0, height: 0)
+        tabBar.layer.shadowRadius = 4
+        tabBar.layer.shadowColor = UIColor.black.cgColor
+        tabBar.layer.shadowOpacity = 0.2
     }
     
 

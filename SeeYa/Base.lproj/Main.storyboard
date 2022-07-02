@@ -3,6 +3,7 @@
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -203,7 +204,7 @@
             </objects>
             <point key="canvasLocation" x="20" y="83.886255924170612"/>
         </scene>
-        <!--Item-->
+        <!--홈 메뉴-->
         <scene sceneID="dds-aw-D3p">
             <objects>
                 <viewController id="h8I-Hb-EU6" customClass="HomeViewController" customModule="SeeYa" customModuleProvider="target" sceneMemberID="viewController">
@@ -246,7 +247,9 @@
                             <constraint firstItem="Ntl-Qz-jUn" firstAttribute="leading" secondItem="gly-qO-Bes" secondAttribute="leading" id="nHS-8I-xns"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="TNu-r3-Htw"/>
+                    <tabBarItem key="tabBarItem" title="홈 메뉴" id="TNu-r3-Htw">
+                        <imageReference key="image" image="house" catalog="system" symbolScale="medium"/>
+                    </tabBarItem>
                     <navigationItem key="navigationItem" id="vUL-wP-2MU"/>
                     <connections>
                         <outlet property="searchBar" destination="aqm-Qc-1nX" id="5rW-6x-ga1"/>
@@ -255,7 +258,59 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bqk-rG-85d" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1826.1538461538462" y="83.886255924170612"/>
+            <point key="canvasLocation" x="1825" y="-698"/>
+        </scene>
+        <!--티켓 교환-->
+        <scene sceneID="pFB-Wc-E1P">
+            <objects>
+                <viewController id="MK6-88-WaT" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="p4p-qK-PHd">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="707"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="tzv-gh-x09"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="티켓 교환" id="xBZ-xa-QjW">
+                        <imageReference key="image" image="ticket" catalog="system" symbolScale="medium"/>
+                    </tabBarItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RQJ-i1-yeN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1825" y="21"/>
+        </scene>
+        <!--채팅-->
+        <scene sceneID="3Tc-Sc-MBp">
+            <objects>
+                <viewController id="SLW-Ir-d7c" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="BnL-dF-GR3">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="707"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="26O-gK-WAa"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="채팅" id="uM6-rY-i2i">
+                        <imageReference key="image" image="bubble.left" catalog="system" symbolScale="medium"/>
+                    </tabBarItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Os2-Xd-y7R" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1825" y="724"/>
+        </scene>
+        <!--프로필-->
+        <scene sceneID="ic2-EK-sM2">
+            <objects>
+                <viewController id="u13-a3-28f" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1KR-by-Q7Q">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="707"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="48U-4n-PsW"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="프로필" image="person.crop.circle" catalog="system" id="KqJ-OG-4vt"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OQU-IU-gpV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1825" y="1505"/>
         </scene>
         <!--Category View Controller-->
         <scene sceneID="OGl-Uc-gV0">
@@ -440,7 +495,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ERz-Gj-OzK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2673.8461538461538" y="83.886255924170612"/>
+            <point key="canvasLocation" x="2737" y="-698"/>
         </scene>
         <!--Location View Controller-->
         <scene sceneID="zQ9-mt-x7r">
@@ -464,7 +519,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yBN-oa-1QJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3453.8461538461538" y="83.886255924170612"/>
+            <point key="canvasLocation" x="3651" y="-698"/>
         </scene>
         <!--Tab Bar View Controller-->
         <scene sceneID="eFd-rE-lGF">
@@ -473,11 +528,18 @@
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="vVL-UZ-Bnr"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="DhX-Uf-ICt">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" systemColor="systemTealColor"/>
+                        <color key="barTintColor" name="Highlight"/>
+                        <color key="selectedImageTintColor" name="Highlight"/>
                     </tabBar>
                     <connections>
                         <segue destination="h8I-Hb-EU6" kind="relationship" relationship="viewControllers" id="I5J-Ew-t3o"/>
+                        <segue destination="MK6-88-WaT" kind="relationship" relationship="viewControllers" id="Pmv-qa-gpJ"/>
+                        <segue destination="SLW-Ir-d7c" kind="relationship" relationship="viewControllers" id="aan-EX-KAT"/>
+                        <segue destination="u13-a3-28f" kind="relationship" relationship="viewControllers" id="Hys-Yv-PVu"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="w2u-AT-av4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -486,10 +548,14 @@
         </scene>
     </scenes>
     <resources>
+        <image name="bubble.left" catalog="system" width="128" height="110"/>
         <image name="calendar" catalog="system" width="128" height="106"/>
         <image name="chevron.right" catalog="system" width="96" height="128"/>
         <image name="heart" catalog="system" width="128" height="109"/>
+        <image name="house" catalog="system" width="128" height="106"/>
         <image name="mappin.and.ellipse" catalog="system" width="118" height="128"/>
+        <image name="person.crop.circle" catalog="system" width="128" height="121"/>
+        <image name="ticket" catalog="system" width="128" height="84"/>
         <namedColor name="Highlight">
             <color red="0.92156862745098034" green="0.31372549019607843" blue="0.25098039215686274" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
@@ -498,6 +564,9 @@
         </systemColor>
         <systemColor name="systemGray2Color">
             <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemTealColor">
+            <color red="0.18823529411764706" green="0.69019607843137254" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="tintColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

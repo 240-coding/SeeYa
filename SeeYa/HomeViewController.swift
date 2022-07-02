@@ -50,6 +50,16 @@ class HomeViewController: TabmanViewController {
     
     private func style() {
         searchBar.searchTextField.font = UIFont.preferredFont(forTextStyle: .subheadline)
+        
+        topMenuView.layer.masksToBounds = false
+        topMenuView.layer.shadowRadius = 4
+        topMenuView.layer.shadowOpacity = 1
+        topMenuView.layer.shadowColor = UIColor.systemGray4.cgColor
+        topMenuView.layer.shadowOffset = CGSize(width: 0 , height:2)
+        topMenuView.layer.shadowPath = UIBezierPath(rect: CGRect(x: 0,
+                                                                 y: topMenuView.bounds.maxY - topMenuView.layer.shadowRadius,
+                                                                 width: topMenuView.bounds.width,
+                                                                 height: topMenuView.layer.shadowRadius)).cgPath
     }
 
 }
