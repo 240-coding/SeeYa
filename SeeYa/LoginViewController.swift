@@ -107,6 +107,16 @@ extension LoginViewController {
     }
 }
 
+extension LoginViewController {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        super.prepare(for: segue, sender: sender)
+        
+        if let homeViewController = segue.destination as? HomeViewController {
+            homeViewController.modalPresentationStyle = .fullScreen
+        }
+    }
+}
+
 extension UIView {
     func roundCorners(corners: UIRectCorner, radius: CGFloat) {
         let path = UIBezierPath(roundedRect: bounds, byRoundingCorners: corners, cornerRadii: CGSize(width: radius, height: radius))

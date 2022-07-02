@@ -14,6 +14,7 @@
 		89000E242870048600D19CED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 89000E232870048600D19CED /* Assets.xcassets */; };
 		89000E272870048600D19CED /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89000E252870048600D19CED /* LaunchScreen.storyboard */; };
 		89000E2F2870281500D19CED /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89000E2E2870281500D19CED /* HomeViewController.swift */; };
+		89000E3328702D2E00D19CED /* Tabman in Frameworks */ = {isa = PBXBuildFile; productRef = 89000E3228702D2E00D19CED /* Tabman */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				89000E3328702D2E00D19CED /* Tabman in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -86,6 +88,9 @@
 			dependencies = (
 			);
 			name = SeeYa;
+			packageProductDependencies = (
+				89000E3228702D2E00D19CED /* Tabman */,
+			);
 			productName = SeeYa;
 			productReference = 89000E172870048600D19CED /* SeeYa.app */;
 			productType = "com.apple.product-type.application";
@@ -114,6 +119,9 @@
 				Base,
 			);
 			mainGroup = 89000E0E2870048600D19CED;
+			packageReferences = (
+				89000E3128702D2E00D19CED /* XCRemoteSwiftPackageReference "Tabman" */,
+			);
 			productRefGroup = 89000E182870048600D19CED /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -362,6 +370,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		89000E3128702D2E00D19CED /* XCRemoteSwiftPackageReference "Tabman" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/uias/Tabman";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		89000E3228702D2E00D19CED /* Tabman */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 89000E3128702D2E00D19CED /* XCRemoteSwiftPackageReference "Tabman" */;
+			productName = Tabman;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 89000E0F2870048600D19CED /* Project object */;
 }
