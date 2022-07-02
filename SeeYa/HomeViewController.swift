@@ -14,7 +14,7 @@ class HomeViewController: TabmanViewController {
     @IBOutlet var topMenuView: UIView!
     @IBOutlet var searchBar: UISearchBar!
     
-    private var viewControllers = [UIViewController(), UIViewController()]
+    private var viewControllers = [UIViewController]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,6 +48,11 @@ class HomeViewController: TabmanViewController {
         }
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.isNavigationBarHidden = true
+    }
+    
     private func style() {
         searchBar.searchTextField.font = UIFont.preferredFont(forTextStyle: .subheadline)
         
@@ -56,10 +61,7 @@ class HomeViewController: TabmanViewController {
         topMenuView.layer.shadowOpacity = 1
         topMenuView.layer.shadowColor = UIColor.systemGray4.cgColor
         topMenuView.layer.shadowOffset = CGSize(width: 0 , height:2)
-        topMenuView.layer.shadowPath = UIBezierPath(rect: CGRect(x: 0,
-                                                                 y: topMenuView.bounds.maxY - topMenuView.layer.shadowRadius,
-                                                                 width: topMenuView.bounds.width,
-                                                                 height: topMenuView.layer.shadowRadius)).cgPath
+        topMenuView.layer.shadowPath = UIBezierPath(rect: CGRect(x: 0, y: topMenuView.bounds.maxY - topMenuView.layer.shadowRadius, width: topMenuView.bounds.width, height: topMenuView.layer.shadowRadius)).cgPath
     }
 
 }

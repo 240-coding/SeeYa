@@ -15,7 +15,7 @@ class CategoryCollectionViewCell: UICollectionViewCell {
     @IBOutlet var dateLabel: UILabel!
     @IBOutlet var locationLabel: UILabel!
     @IBOutlet var heartButton: UIButton!
-    
+        
     override func awakeFromNib() {
         super.awakeFromNib()
         self.dateImageView.image = UIImage(systemName: "calendar")

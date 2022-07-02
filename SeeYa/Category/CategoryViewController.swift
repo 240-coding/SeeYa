@@ -16,6 +16,14 @@ class CategoryViewController: UIViewController {
         super.viewDidLoad()
         self.tableView.delegate = self
         self.tableView.dataSource = self
+        NotificationCenter.default.addObserver(self, selector: #selector(didReceiveCellSelectedNotification(_:)), name: Notification.Name("DidCellSelected"), object: nil)
+    }
+    
+    @objc func didReceiveCellSelectedNotification(_ noti: Notification) {
+        guard let vc = storyboard?.instantiateViewController(withIdentifier: "DetailViewController") as? DetailViewController else {
+            return
+        }
+        navigationController.pushViewController(vc, animated: true)
     }
 
 }
@@ -35,5 +43,6 @@ extension CategoryViewController: UITableViewDataSource, UITableViewDelegate {
         return 350
     }
     
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    }
 }

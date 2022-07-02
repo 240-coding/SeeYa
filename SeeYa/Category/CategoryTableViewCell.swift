@@ -13,7 +13,6 @@ class CategoryTableViewCell: UITableViewCell {
     
     let cellIdentifier = "eventCell"
 
-
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -48,7 +47,12 @@ extension CategoryTableViewCell: UICollectionViewDataSource, UICollectionViewDel
         return cell
     }
     
-    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if let cell = collectionView.cellForItem(at: indexPath) as? CategoryCollectionViewCell {
+            UserInformation.shared.selectedPlace = cell.locationLabel.text
+            NotificationCenter.default.post(name: Notification.Name("DidCellSelected"), object: nil)
+        }
+    }
 }
 
 extension CategoryTableViewCell: UICollectionViewDelegateFlowLayout {

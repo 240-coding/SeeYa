@@ -20,6 +20,8 @@
 		89000E3A2870457B00D19CED /* CategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89000E392870457B00D19CED /* CategoryCollectionViewCell.swift */; };
 		89000E3C2870522900D19CED /* CategoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89000E3B2870522900D19CED /* CategoryTableViewCell.swift */; };
 		89000E3E28705B6600D19CED /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89000E3D28705B6600D19CED /* TabBarViewController.swift */; };
+		896BF64028709516002A8FF0 /* UserInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 896BF63F28709516002A8FF0 /* UserInformation.swift */; };
+		896BF64228709636002A8FF0 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 896BF64128709636002A8FF0 /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +39,8 @@
 		89000E392870457B00D19CED /* CategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewCell.swift; sourceTree = "<group>"; };
 		89000E3B2870522900D19CED /* CategoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryTableViewCell.swift; sourceTree = "<group>"; };
 		89000E3D28705B6600D19CED /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		896BF63F28709516002A8FF0 /* UserInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInformation.swift; sourceTree = "<group>"; };
+		896BF64128709636002A8FF0 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,7 +80,9 @@
 				89000E1E2870048600D19CED /* LoginViewController.swift */,
 				89000E2E2870281500D19CED /* HomeViewController.swift */,
 				89000E3628703AD300D19CED /* LocationViewController.swift */,
+				896BF64128709636002A8FF0 /* DetailViewController.swift */,
 				89000E3D28705B6600D19CED /* TabBarViewController.swift */,
+				896BF63F28709516002A8FF0 /* UserInformation.swift */,
 				89000E202870048600D19CED /* Main.storyboard */,
 				89000E232870048600D19CED /* Assets.xcassets */,
 				89000E252870048600D19CED /* LaunchScreen.storyboard */,
@@ -172,11 +178,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				896BF64228709636002A8FF0 /* DetailViewController.swift in Sources */,
 				89000E3528703A9200D19CED /* CategoryViewController.swift in Sources */,
 				89000E1F2870048600D19CED /* LoginViewController.swift in Sources */,
 				89000E1B2870048600D19CED /* AppDelegate.swift in Sources */,
 				89000E3728703AD300D19CED /* LocationViewController.swift in Sources */,
 				89000E3E28705B6600D19CED /* TabBarViewController.swift in Sources */,
+				896BF64028709516002A8FF0 /* UserInformation.swift in Sources */,
 				89000E1D2870048600D19CED /* SceneDelegate.swift in Sources */,
 				89000E3A2870457B00D19CED /* CategoryCollectionViewCell.swift in Sources */,
 				89000E2F2870281500D19CED /* HomeViewController.swift in Sources */,
