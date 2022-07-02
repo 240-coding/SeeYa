@@ -19,6 +19,13 @@ class HomeViewController: TabmanViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+//        navigationItem.hidesBackButton = true
+//        let backButton = UIBarButtonItem()
+//        backButton.image = UIImage(systemName: "chevron.backward")
+////        backButton.imageInsets = UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 0)
+//        navigationItem.backBarButtonItem = backButton
+//        navigationItem.backBarButtonItem?.imageInsets = UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 0)
+//        
         let categoryVC = storyboard?.instantiateViewController(withIdentifier: "CategoryViewController") as! CategoryViewController
         let locationVC = storyboard?.instantiateViewController(withIdentifier: "LocationViewController") as! LocationViewController
         viewControllers = [categoryVC, locationVC]

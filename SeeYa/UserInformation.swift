@@ -11,4 +11,5 @@ class UserInformation {
     static let shared: UserInformation = UserInformation()
     
     var selectedPlace: String?
+    var isLiked: Bool?
 }
