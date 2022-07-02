@@ -111,8 +111,8 @@ extension LoginViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         super.prepare(for: segue, sender: sender)
         
-        if let homeViewController = segue.destination as? HomeViewController {
-            homeViewController.modalPresentationStyle = .fullScreen
+        if let tabBarViewController = segue.destination as? TabBarViewController {
+            tabBarViewController.modalPresentationStyle = .fullScreen
         }
     }
 }

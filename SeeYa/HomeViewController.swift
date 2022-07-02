@@ -19,6 +19,10 @@ class HomeViewController: TabmanViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let categoryVC = storyboard?.instantiateViewController(withIdentifier: "CategoryViewController") as! CategoryViewController
+        let locationVC = storyboard?.instantiateViewController(withIdentifier: "LocationViewController") as! LocationViewController
+        viewControllers = [categoryVC, locationVC]
+        
         self.dataSource = self
         
         style()
