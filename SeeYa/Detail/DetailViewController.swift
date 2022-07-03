@@ -8,39 +8,48 @@
 import UIKit
 
 class DetailViewController: UIViewController {
-
+    
+    @IBOutlet var scoreView: UIView!
+    @IBOutlet var stadiumImageView: UIImageView!
+    @IBOutlet var detailShowButton: UIButton!
+        
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         styleNavigationBar()
+        view.backgroundColor = .systemGray6
+        setStatusBar()
+        setScoreView()
+        
+        tabBarController?.tabBar.isHidden = true
+        
+        detailShowButton.addTarget(self, action: #selector(presentSeatListVC), for: .touchUpInside)
+        let tap = UITapGestureRecognizer(target: self, action: #selector(presentSeatListVC))
+        view.addGestureRecognizer(tap)
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.isNavigationBarHidden = false
+        styleNavigationBar()
     }
     
+    // MARK: - Setup Navigation Bar
     func styleNavigationBar() {
         navigationController?.navigationBar.tintColor = .black
-//        navigationController?.navigationBar.topItem?.title = ""
-//        navigationController?.navigationBar.topItem?.hidesBackButton = true
         
         navigationController?.navigationBar.backgroundColor = .white
         navigationController?.navigationBar.layer.masksToBounds = false
-        navigationController?.navigationBar.layer.shadowColor = UIColor.systemGray6.cgColor
-        navigationController?.navigationBar.layer.shadowOpacity = 1
-        navigationController?.navigationBar.layer.shadowOffset = CGSize(width: 0, height: 2)
-        navigationController?.navigationBar.layer.shadowRadius = 2
+        navigationController?.navigationBar.layer.shadowColor = UIColor.systemGray4.cgColor
+        navigationController?.navigationBar.layer.shadowOpacity = 0.5
+        navigationController?.navigationBar.layer.shadowOffset = CGSize(width: 0, height: 8)
+        navigationController?.navigationBar.layer.shadowRadius = 3
         
         // 뒤로 가기
         let backButton = UIBarButtonItem(image: UIImage(systemName: "chevron.backward"), style: .plain, target: self, action: #selector(popVC))
-//        backButton.image = UIImage(systemName: "chevron.backward")
         backButton.imageInsets = UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 0)
         navigationItem.leftBarButtonItem = backButton
-//        navigationItem.backBarButtonItem = backButton
-//        navigationItem.backBarButtonItem?.imageInsets = UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 0)
 
-        
         // 하트 버튼
         let heartButton = UIBarButtonItem(image: UIImage(systemName: "heart"), style: .plain, target: self, action: #selector(pressHeartButton(sender:)))
         heartButton.imageInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 10)
@@ -97,5 +106,50 @@ class DetailViewController: UIViewController {
         newHeartButton.tintColor = isLiked ? UIColor(named: "Highlight") : .black
         navigationItem.rightBarButtonItem = newHeartButton
         
+    }
+    // MARK: - Navigation Bar 끝
+    
+    func setScoreView() {
+        scoreView.roundCorners(corners: [.topLeft, .topRight], radius: 15)
+    }
+    
+    @objc func presentSeatListVC() {
+        guard let seatListVC = storyboard?.instantiateViewController(withIdentifier: "SeatListViewController") as? SeatListViewController else {
+            print("Can't find VC")
+            return
+        }
+        seatListVC.delegate = self
+        let nav = UINavigationController(rootViewController: seatListVC)
+        // 1
+        nav.modalPresentationStyle = .pageSheet
+        // 2
+        if let sheet = nav.sheetPresentationController {
+            // 3
+            sheet.detents = [.medium(), .large()]
+            sheet.preferredCornerRadius = 15
+        }
+        // 4
+        present(nav, animated: true, completion: nil)
+    }
+}
+
+// MARK: - Extension
+extension DetailViewController: SeatListDelegate {
+    func pushVC() {
+        guard let seatDetailVC = storyboard?.instantiateViewController(withIdentifier: "SeatDetailViewController") else {
+            print("Can't find VC")
+            return
+        }
+        navigationController?.pushViewController(seatDetailVC, animated: true)
+    }
+}
+extension UIViewController {
+    func setStatusBar() {
+        let statusBarSize = UIApplication.shared.statusBarFrame.size // deprecated but OK
+        let frame = CGRect(origin: .zero, size: statusBarSize)
+        let statusbarView = UIView(frame: frame)
+        
+        statusbarView.backgroundColor = .white
+        view.addSubview(statusbarView)
     }
 }
