@@ -13,7 +13,9 @@
 ViewFinder는 이런 고민을 가진 스포츠/공연 관람객을 위해 `좌석의 정확한 시야 정보 제공` , `상호 win-win이 가능한 티켓 교환` 기능을 제공합니다.
 
 ViewFinder는 이화여자대학교 2022학년도 SW창업해커톤에서 🏆 **최우수상** 🏆을 수상했습니다.  
-ViewFinder의 기획안이 궁금하다면 [여기](https://docs.google.com/presentation/d/1I3p0HsIYT7JO-0navS11NZthavFHjVHyCYku_8E6iNE/edit#slide=id.g13a24e60ece_0_10)를 클릭해주세요!
+## 관련 링크
+- [기획서](https://docs.google.com/presentation/d/1I3p0HsIYT7JO-0navS11NZthavFHjVHyCYku_8E6iNE/edit#slide=id.g13a24e60ece_0_10)
+- [데모 영상](https://drive.google.com/file/d/1MUEJpWUs7Zj-PBk1-fEtYwS23ANfcLLb/view)
 
 ## 주요 기능
 
