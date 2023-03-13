@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="InfoHeaderView" customModule="SeeYa" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="90"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="wvE-Cg-Ruf">
+                    <rect key="frame" x="32" y="24" width="74" height="42"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OmP-eP-h2m">
+                            <rect key="frame" x="0.0" y="0.0" width="74" height="23"/>
+                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="19"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g4a-0f-ltk">
+                            <rect key="frame" x="0.0" y="25" width="74" height="17"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <color key="textColor" name="Gray"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                </stackView>
+                <button opaque="NO" contentMode="scaleToFill" semanticContentAttribute="forceRightToLeft" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XPk-qc-0tX">
+                    <rect key="frame" x="292.33333333333331" y="36" width="68.666666666666686" height="18"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <color key="tintColor" name="Passive"/>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="-4" maxY="0.0"/>
+                    <state key="normal" title="자세히 보기" image="chevron.right" catalog="system">
+                        <color key="titleColor" name="Passive"/>
+                    </state>
+                </button>
+            </subviews>
+            <constraints>
+                <constraint firstItem="wvE-Cg-Ruf" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="1Eb-H0-M4L"/>
+                <constraint firstAttribute="trailing" secondItem="XPk-qc-0tX" secondAttribute="trailing" constant="32" id="89G-qR-JIo"/>
+                <constraint firstItem="wvE-Cg-Ruf" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="32" id="DQX-nh-mfU"/>
+                <constraint firstItem="XPk-qc-0tX" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="SFm-G2-02O"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="descriptionLabel" destination="g4a-0f-ltk" id="qI0-Vp-Zwm"/>
+                <outlet property="moreButton" destination="XPk-qc-0tX" id="KUm-s7-iJp"/>
+                <outlet property="titleLabel" destination="OmP-eP-h2m" id="aov-5m-fwd"/>
+            </connections>
+            <point key="canvasLocation" x="-72.51908396946564" y="-247.53521126760563"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="chevron.right" catalog="system" width="97" height="128"/>
+        <namedColor name="Gray">
+            <color red="0.50980392156862742" green="0.50980392156862742" blue="0.50980392156862742" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Passive">
+            <color red="0.7686274509803922" green="0.7686274509803922" blue="0.7686274509803922" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

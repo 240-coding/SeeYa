@@ -20,6 +20,11 @@
 		89000E3A2870457B00D19CED /* CategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89000E392870457B00D19CED /* CategoryCollectionViewCell.swift */; };
 		89000E3C2870522900D19CED /* CategoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89000E3B2870522900D19CED /* CategoryTableViewCell.swift */; };
 		89000E3E28705B6600D19CED /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89000E3D28705B6600D19CED /* TabBarViewController.swift */; };
+		8904B64329BD84B700744E2F /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8904B64229BD84B700744E2F /* InfoViewController.swift */; };
+		8904B64529BD85C800744E2F /* InfoHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8904B64429BD85C800744E2F /* InfoHeaderView.swift */; };
+		8904B64729BD85D100744E2F /* InfoHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8904B64629BD85D100744E2F /* InfoHeaderView.xib */; };
+		8904B64929BD8D0800744E2F /* InfoSeatTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8904B64829BD8D0800744E2F /* InfoSeatTableViewCell.swift */; };
+		8904B64B29BD8D5200744E2F /* InfoSeatCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8904B64A29BD8D5200744E2F /* InfoSeatCollectionViewCell.swift */; };
 		89566C102870D4FC00A82780 /* SeatListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89566C0F2870D4FC00A82780 /* SeatListViewController.swift */; };
 		89566C122870D95300A82780 /* SeatListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89566C112870D95300A82780 /* SeatListTableViewCell.swift */; };
 		89566C142870E5EB00A82780 /* SeatDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89566C132870E5EB00A82780 /* SeatDetailViewController.swift */; };
@@ -31,6 +36,7 @@
 		896BF64228709636002A8FF0 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 896BF64128709636002A8FF0 /* DetailViewController.swift */; };
 		898DD13828710BDF003431F2 /* TicketTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 898DD13728710BDF003431F2 /* TicketTableViewCell.swift */; };
 		898DD13D28711509003431F2 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 898DD13C28711509003431F2 /* ChatViewController.swift */; };
+		89AB9F8A29BF03A500237FF3 /* InfoLinkTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89AB9F8929BF03A500237FF3 /* InfoLinkTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +54,11 @@
 		89000E392870457B00D19CED /* CategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewCell.swift; sourceTree = "<group>"; };
 		89000E3B2870522900D19CED /* CategoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryTableViewCell.swift; sourceTree = "<group>"; };
 		89000E3D28705B6600D19CED /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		8904B64229BD84B700744E2F /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
+		8904B64429BD85C800744E2F /* InfoHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoHeaderView.swift; sourceTree = "<group>"; };
+		8904B64629BD85D100744E2F /* InfoHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InfoHeaderView.xib; sourceTree = "<group>"; };
+		8904B64829BD8D0800744E2F /* InfoSeatTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoSeatTableViewCell.swift; sourceTree = "<group>"; };
+		8904B64A29BD8D5200744E2F /* InfoSeatCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoSeatCollectionViewCell.swift; sourceTree = "<group>"; };
 		89566C0F2870D4FC00A82780 /* SeatListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeatListViewController.swift; sourceTree = "<group>"; };
 		89566C112870D95300A82780 /* SeatListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeatListTableViewCell.swift; sourceTree = "<group>"; };
 		89566C132870E5EB00A82780 /* SeatDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeatDetailViewController.swift; sourceTree = "<group>"; };
@@ -59,6 +70,7 @@
 		896BF64128709636002A8FF0 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		898DD13728710BDF003431F2 /* TicketTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketTableViewCell.swift; sourceTree = "<group>"; };
 		898DD13C28711509003431F2 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		89AB9F8929BF03A500237FF3 /* InfoLinkTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoLinkTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +105,7 @@
 			isa = PBXGroup;
 			children = (
 				89000E382870456500D19CED /* Category */,
+				8904B64129BD84A800744E2F /* Info */,
 				89566C0E2870D4EB00A82780 /* Detail */,
 				89566C1D28710A8D00A82780 /* Ticket */,
 				89000E3D28705B6600D19CED /* TabBarViewController.swift */,
@@ -120,6 +133,19 @@
 				89000E3B2870522900D19CED /* CategoryTableViewCell.swift */,
 			);
 			path = Category;
+			sourceTree = "<group>";
+		};
+		8904B64129BD84A800744E2F /* Info */ = {
+			isa = PBXGroup;
+			children = (
+				8904B64229BD84B700744E2F /* InfoViewController.swift */,
+				8904B64429BD85C800744E2F /* InfoHeaderView.swift */,
+				8904B64629BD85D100744E2F /* InfoHeaderView.xib */,
+				8904B64829BD8D0800744E2F /* InfoSeatTableViewCell.swift */,
+				8904B64A29BD8D5200744E2F /* InfoSeatCollectionViewCell.swift */,
+				89AB9F8929BF03A500237FF3 /* InfoLinkTableViewCell.swift */,
+			);
+			path = Info;
 			sourceTree = "<group>";
 		};
 		89566C0E2870D4EB00A82780 /* Detail */ = {
@@ -212,6 +238,7 @@
 				89000E272870048600D19CED /* LaunchScreen.storyboard in Resources */,
 				89000E242870048600D19CED /* Assets.xcassets in Resources */,
 				89000E222870048600D19CED /* Main.storyboard in Resources */,
+				8904B64729BD85D100744E2F /* InfoHeaderView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -228,18 +255,23 @@
 				896BF64228709636002A8FF0 /* DetailViewController.swift in Sources */,
 				89566C122870D95300A82780 /* SeatListTableViewCell.swift in Sources */,
 				89000E3528703A9200D19CED /* CategoryViewController.swift in Sources */,
+				8904B64B29BD8D5200744E2F /* InfoSeatCollectionViewCell.swift in Sources */,
+				8904B64929BD8D0800744E2F /* InfoSeatTableViewCell.swift in Sources */,
 				89000E1F2870048600D19CED /* LoginViewController.swift in Sources */,
 				89566C102870D4FC00A82780 /* SeatListViewController.swift in Sources */,
 				89000E1B2870048600D19CED /* AppDelegate.swift in Sources */,
 				89566C1C287103AA00A82780 /* TicketViewController.swift in Sources */,
+				8904B64329BD84B700744E2F /* InfoViewController.swift in Sources */,
 				89566C1A2870F73E00A82780 /* ReviewCollectionViewCell.swift in Sources */,
 				89000E3728703AD300D19CED /* LocationViewController.swift in Sources */,
+				89AB9F8A29BF03A500237FF3 /* InfoLinkTableViewCell.swift in Sources */,
 				89000E3E28705B6600D19CED /* TabBarViewController.swift in Sources */,
 				896BF64028709516002A8FF0 /* UserInformation.swift in Sources */,
 				89566C182870EDD300A82780 /* SeatDetailTableViewCell.swift in Sources */,
 				89000E1D2870048600D19CED /* SceneDelegate.swift in Sources */,
 				89000E3A2870457B00D19CED /* CategoryCollectionViewCell.swift in Sources */,
 				89000E2F2870281500D19CED /* HomeViewController.swift in Sources */,
+				8904B64529BD85C800744E2F /* InfoHeaderView.swift in Sources */,
 				898DD13D28711509003431F2 /* ChatViewController.swift in Sources */,
 				89000E3C2870522900D19CED /* CategoryTableViewCell.swift in Sources */,
 			);

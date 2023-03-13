@@ -9,6 +9,8 @@ import UIKit
 
 class TicketTableViewCell: UITableViewCell {
     
+    static let cellIdentifier = "TicketCell"
+    
     @IBOutlet var oppositeImageView: UIImageView!
     @IBOutlet var oppositeNameView: UIView!
     @IBOutlet var oppositeEventNameLabel: UILabel!

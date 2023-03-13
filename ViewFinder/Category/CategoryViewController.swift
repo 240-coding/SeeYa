@@ -23,7 +23,7 @@ class CategoryViewController: UIViewController {
     }
     
     @objc func didReceiveCellSelectedNotification(_ noti: Notification) {
-        guard let vc = storyboard?.instantiateViewController(withIdentifier: "DetailViewController") as? DetailViewController else {
+        guard let vc = storyboard?.instantiateViewController(withIdentifier: "InfoViewController") as? InfoViewController else {
             return
         }
         navigationController?.pushViewController(vc, animated: true)
