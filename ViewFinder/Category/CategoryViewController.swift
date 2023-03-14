@@ -19,6 +19,7 @@ class CategoryViewController: UIViewController {
         super.viewDidLoad()
         self.tableView.delegate = self
         self.tableView.dataSource = self
+        
         NotificationCenter.default.addObserver(self, selector: #selector(didReceiveCellSelectedNotification(_:)), name: Notification.Name("DidCellSelected"), object: nil)
     }
     

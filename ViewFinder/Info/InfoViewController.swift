@@ -18,24 +18,45 @@ class InfoViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        tableView.register(UINib(nibName: "InfoTableViewHeader", bundle: nil), forHeaderFooterViewReuseIdentifier: InfoTableViewHeader.identifier)
         tableView.register(UINib(nibName: "InfoHeaderView", bundle: nil), forHeaderFooterViewReuseIdentifier: InfoHeaderView.identifier)
         
         if #available(iOS 15.0, *) {
           tableView.sectionHeaderTopPadding = 0
         }
+        
+        let backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: self, action: nil)
+        backBarButtonItem.tintColor = .black
+        self.navigationItem.backBarButtonItem = backBarButtonItem
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.isNavigationBarHidden = false
+        styleNavigationBar()
     }
-    */
+    
+    func styleNavigationBar() {
+        navigationController?.navigationBar.tintColor = .black
+        navigationController?.navigationBar.backgroundColor = .white
+        
+        // 뒤로 가기
+        let backButton = UIBarButtonItem(image: UIImage(systemName: "chevron.backward"), style: .plain, target: self, action: #selector(popVC))
+        backButton.imageInsets = UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 0)
+        navigationItem.leftBarButtonItem = backButton
+    }
+    
+    @objc func popVC() {
+        self.navigationController?.popViewController(animated: true)
+    }
+}
 
+extension InfoViewController: SeatCellDelegate {
+    func didSeatCellTapped() {
+        let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "DetailViewController") as! DetailViewController
+        
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
 }
 
 extension InfoViewController: UITableViewDelegate, UITableViewDataSource {
@@ -47,7 +68,10 @@ extension InfoViewController: UITableViewDelegate, UITableViewDataSource {
         let cell: UITableViewCell
         
         if indexPath.section == 0 {
-            cell = tableView.dequeueReusableCell(withIdentifier: InfoSeatTableViewCell.cellIdentifier, for: indexPath) as! InfoSeatTableViewCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: InfoSeatTableViewCell.cellIdentifier, for: indexPath) as! InfoSeatTableViewCell
+            cell.delegate = self
+            
+            return cell
         } else if indexPath.section == 1 {
             cell = tableView.dequeueReusableCell(withIdentifier: TicketTableViewCell.cellIdentifier, for: indexPath)
         } else {
@@ -74,15 +98,23 @@ extension InfoViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let header = tableView.dequeueReusableHeaderFooterView(withIdentifier: InfoHeaderView.identifier) as! InfoHeaderView
-        
-        header.titleLabel.text = self.headerTitle[section]
-        header.descriptionLabel.text = self.headerDescription[section]
-        
-        return header
+        if section == 0 {
+            let header = tableView.dequeueReusableHeaderFooterView(withIdentifier: InfoTableViewHeader.identifier) as! InfoTableViewHeader
+            
+            header.titleLabel.text = self.headerTitle[section]
+            header.descriptionLabel.text = self.headerDescription[section]
+            
+            return header
+        } else {
+            let header = tableView.dequeueReusableHeaderFooterView(withIdentifier: InfoHeaderView.identifier) as! InfoHeaderView
+            header.titleLabel.text = self.headerTitle[section]
+            header.descriptionLabel.text = self.headerDescription[section]
+            
+            return header
+        }
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 80
+        return section == 0 ? 370 : 80
     }
 }

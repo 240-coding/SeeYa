@@ -7,6 +7,10 @@
 
 import UIKit
 
+protocol SeatCellDelegate {
+    func didSeatCellTapped()
+}
+
 struct SeatInfo {
     let title: String
     let percent: Int
@@ -18,6 +22,8 @@ class InfoSeatTableViewCell: UITableViewCell {
     static let cellIdentifier = "SeatCell"
     
     @IBOutlet weak var collectionView: UICollectionView!
+    
+    var delegate: SeatCellDelegate?
     
     private let cellIdentifier = "seatCollectionCell"
     private let seat: [SeatInfo] = [SeatInfo(title: "고척스카이돔 401구역 D열", percent: 92, like: 23), SeatInfo(title: "고척스카이돔 201구역 F열", percent: 98, like: 31)]
@@ -55,6 +61,10 @@ extension InfoSeatTableViewCell: UICollectionViewDelegate, UICollectionViewDataS
         
         
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        delegate?.didSeatCellTapped()
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {

@@ -32,6 +32,8 @@
 		89566C182870EDD300A82780 /* SeatDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89566C172870EDD300A82780 /* SeatDetailTableViewCell.swift */; };
 		89566C1A2870F73E00A82780 /* ReviewCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89566C192870F73E00A82780 /* ReviewCollectionViewCell.swift */; };
 		89566C1C287103AA00A82780 /* TicketViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89566C1B287103AA00A82780 /* TicketViewController.swift */; };
+		895DDB6729BFFA600018B624 /* InfoTableViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 895DDB6629BFFA600018B624 /* InfoTableViewHeader.swift */; };
+		895DDB6929BFFA690018B624 /* InfoTableViewHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 895DDB6829BFFA690018B624 /* InfoTableViewHeader.xib */; };
 		896BF64028709516002A8FF0 /* UserInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 896BF63F28709516002A8FF0 /* UserInformation.swift */; };
 		896BF64228709636002A8FF0 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 896BF64128709636002A8FF0 /* DetailViewController.swift */; };
 		898DD13828710BDF003431F2 /* TicketTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 898DD13728710BDF003431F2 /* TicketTableViewCell.swift */; };
@@ -66,6 +68,8 @@
 		89566C172870EDD300A82780 /* SeatDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeatDetailTableViewCell.swift; sourceTree = "<group>"; };
 		89566C192870F73E00A82780 /* ReviewCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewCollectionViewCell.swift; sourceTree = "<group>"; };
 		89566C1B287103AA00A82780 /* TicketViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketViewController.swift; sourceTree = "<group>"; };
+		895DDB6629BFFA600018B624 /* InfoTableViewHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoTableViewHeader.swift; sourceTree = "<group>"; };
+		895DDB6829BFFA690018B624 /* InfoTableViewHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InfoTableViewHeader.xib; sourceTree = "<group>"; };
 		896BF63F28709516002A8FF0 /* UserInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInformation.swift; sourceTree = "<group>"; };
 		896BF64128709636002A8FF0 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		898DD13728710BDF003431F2 /* TicketTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketTableViewCell.swift; sourceTree = "<group>"; };
@@ -144,6 +148,8 @@
 				8904B64829BD8D0800744E2F /* InfoSeatTableViewCell.swift */,
 				8904B64A29BD8D5200744E2F /* InfoSeatCollectionViewCell.swift */,
 				89AB9F8929BF03A500237FF3 /* InfoLinkTableViewCell.swift */,
+				895DDB6629BFFA600018B624 /* InfoTableViewHeader.swift */,
+				895DDB6829BFFA690018B624 /* InfoTableViewHeader.xib */,
 			);
 			path = Info;
 			sourceTree = "<group>";
@@ -238,6 +244,7 @@
 				89000E272870048600D19CED /* LaunchScreen.storyboard in Resources */,
 				89000E242870048600D19CED /* Assets.xcassets in Resources */,
 				89000E222870048600D19CED /* Main.storyboard in Resources */,
+				895DDB6929BFFA690018B624 /* InfoTableViewHeader.xib in Resources */,
 				8904B64729BD85D100744E2F /* InfoHeaderView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -255,6 +262,7 @@
 				896BF64228709636002A8FF0 /* DetailViewController.swift in Sources */,
 				89566C122870D95300A82780 /* SeatListTableViewCell.swift in Sources */,
 				89000E3528703A9200D19CED /* CategoryViewController.swift in Sources */,
+				895DDB6729BFFA600018B624 /* InfoTableViewHeader.swift in Sources */,
 				8904B64B29BD8D5200744E2F /* InfoSeatCollectionViewCell.swift in Sources */,
 				8904B64929BD8D0800744E2F /* InfoSeatTableViewCell.swift in Sources */,
 				89000E1F2870048600D19CED /* LoginViewController.swift in Sources */,

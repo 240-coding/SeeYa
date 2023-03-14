@@ -53,7 +53,7 @@
                 <outlet property="moreButton" destination="XPk-qc-0tX" id="KUm-s7-iJp"/>
                 <outlet property="titleLabel" destination="OmP-eP-h2m" id="aov-5m-fwd"/>
             </connections>
-            <point key="canvasLocation" x="-72.51908396946564" y="-247.53521126760563"/>
+            <point key="canvasLocation" x="71" y="-265"/>
         </view>
     </objects>
     <resources>
